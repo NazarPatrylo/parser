@@ -1,0 +1,12 @@
+
+AddDefaultCharset UTF-8
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule .* index.php [L]
+
+<FilesMatch "\.(xml|docx|xlsx|xls|doc|pdf|ppt|pptx|ods|odt|)$">
+   ForceType application/octet-stream
+   Header set Content-Disposition attachment
+</FilesMatch>
