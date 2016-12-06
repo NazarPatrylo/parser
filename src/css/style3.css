@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+computers{
+	padding: 1% 5%;
+	display: block;
+    background: #444844;;
+    border-color: #3a87ad;
+    font-family: 'Raleway', sans-serif;
+}
+computer{
+	display: flex;
+  background: #f2dede;
+  border-color: #b94a48;
+	background-color: #f7f7f7;
+
+	-moz-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+
+}
+id, name, code, cpu, screen, ram, type_ram, os, opis, HDD, cd_rom, color, weight,link ,data  {
+
+	width: 6%;
+	border: 1px solid #cecbcb;
+	font-size: 12px;
+	word-wrap: break-word;
+	border-left: 0;
+	padding: 1px;
+  text-align: center;
+}
+
+computers computer:hover{
+	background-color: #484848 !important;
+	color: #fffbfb;
+	cursor: pointer;
+}
+computers computer:focus{
+	background-color: red !important;
+}
+computers computer:nth-child(odd){
+  background-color: rgba(141, 210, 137, 0.68);
+}
+
+id {
+  word-wrap:normal; !important;
+	width: 2%;
+	border-left: 1px solid #cecbcb;
+}
+name {
+	width: 12%;
+}
+code {
+	width: 5%;
+}
+cpu {
+	width: 6%;
+}
+screen {
+	width: 6%;
+}
+ram {
+	width: 4%;
+}
+type_ram {
+	width: 6%;
+}
+os {
+	width: 6%;
+}
+opis {
+	width: 16%;
+}
+HDD {
+	width: 6%;
+}
+cd_rom {
+	width: 6%;
+}
+color {
+	width: 6%;
+}
+weight {
+	width: 6%;
+}
+ink  {
+	width: 6%;
+}
+data{
+	width: 6%;
+}
