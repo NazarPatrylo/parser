@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 computers{
 	padding: 5% 5%;
-	display: block;
+	display: block; 
     background: white;
     border-color: #3a87ad;
     font-family: 'Oswald', sans-serif;
@@ -38,7 +38,7 @@ computers computer:focus{
 }
 
 computers computer:nth-child(even){
-  background-color: rgba(110, 210, 137, 0.68); 
+  background-color: rgba(110, 210, 137, 0.68);
 }
 
 id {
