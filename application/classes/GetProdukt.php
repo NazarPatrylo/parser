@@ -150,7 +150,12 @@ class GetProdukt {
       switch ($_POST['format']) {
         case 'XML':
 
-              $dom = new DomDocument('1.0');
+    		$dom = new DOMDocument( "1.0", "ISO-8859-15" );
+		    $dom->preserveWhiteSpace = false;
+		    $dom->formatOutput = true;
+				$xslt = $dom->createProcessingInstruction('xml-stylesheet', 'type="text/css" href="http://parser.you-web.xyz/src/css/'.$_POST['style'].'.css"');
+			  $dom->appendChild($xslt);
+
               $computers = $dom->appendChild($dom->createElement('computers'));
 
               $result = $obj_db->query2("CALL ".$_POST['procedura']);

@@ -3,13 +3,14 @@
         <div class="container">
                 <div class="row">
                         <div class="col-sm-12 text-center">
-                                <h1>zadanie #4</h1>
+                                <h1>zadanie #4-7</h1>
                                 <p>Aplikacja ma dawać możliwość zapisu danych do formatów: XML, YAML, OGDL, JSON </p>
                                 <p>Projekt aplikacji ma zawierać testy jednostkowe sprawdzające poprawność realizacji kodu</p>
                                 <p>Porjekt aplikacji ma być tworzony z użyciem narzędzia do analizy bezpieczeństwa, wydajności i poprawności kodu				</p>
                                 <br>
                                 <p>DataBase:</p>
                                 <p>link: http://indigo.elastictech.org/phpmyadmin/?pma_username=u464_parser</p>
+                                <p>github: https://github.com/NazarPatrylo/parser</p>
                                 <p>user db: u464_parser</p>
                                 <p>pass db: 111111</p>
 
@@ -31,6 +32,14 @@
                                   <input type="radio" name="format" value="YAML" id="radio2"> YAML
                                   <input type="radio" name="format" value="OGDL" id="radio3"> OGDL
                                 </form>
+                                <br>
+                                <p>wybierz styl xml:</p>
+                                <form id="styles">
+                                  <input type="radio" name="format" value="style1" id="style0" checked> style 1
+                                  <input type="radio" name="format" value="style2" id="style1"> style 2
+                                  <input type="radio" name="format" value="style3" id="style2"> style 3
+                                </form>
+
                                 <br>
                                 <a class="button-v1 first" href="#" data-procedura="FIRST()" data-url="get_first_element_Z4"  >first elements</a>
                                 <a class="button-v1 first10" href="#" data-procedura="FIRST10()" data-url="get_first_element_Z4">first 10 elements</a>
@@ -158,13 +167,22 @@ var_dump($parsed == $invoice);
         }
       }
 
+      var styles = $('#styles input');
+      var style ='';
+      for (var i = 0; i < styles.length; i++) {
+        if($('#style'+i).prop("checked")){
+          style = $('#style'+i).val();
+        }
+      }
 
+alert(style);
         $.ajax({
         type:"POST",
         url: url,
         data: {
           procedura:procedura,
-          format:format
+          format:format,
+          style:style
         },
         dataType:"json",
             success: function(data){

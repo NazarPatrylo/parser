@@ -17,7 +17,7 @@
                                 <a class="button-v1 " href="zadanie1">zadanie #1</a>
                                 <a class="button-v1 " href="zadanie2">zadanie #2</a>
                                 <a class="button-v1 " href="zadanie3">zadanie #3</a>
-                                <a class="button-v1 " href="zadanie4">zadanie #4</a>
+                                <a class="button-v1 " href="zadanie4">zadanie #4-7</a>
                         </div>
                 </div>
         </div>
