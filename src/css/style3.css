@@ -4,7 +4,7 @@ computers{
 	display: block;
     background: #444844;;
     border-color: #3a87ad;
-    font-family: 'Raleway', sans-serif; 
+    font-family: 'Raleway', sans-serif;  
 }
 computer{
 	display: flex;
